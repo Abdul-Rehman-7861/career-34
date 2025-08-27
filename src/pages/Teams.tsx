@@ -43,7 +43,7 @@ const Teams: React.FC = () => {
       social: {
         linkedin: 'http://www.linkedin.com/in/mian-ahmad-yasin',
         github: 'https://github.com/Ahmadyasin1',
-        email: 'ahmad_yasin@nexariza.com'
+        email: 'contact@nexariza.com'
       },
       achievements: ['AI Industry Pioneer', 'Tech Innovation Leader', 'Business Transformation Expert'],
       location: 'Lahore, Pakistan',
@@ -60,7 +60,7 @@ const Teams: React.FC = () => {
       social: {
         linkedin: 'https://www.linkedin.com/in/abdul-rehman-a49365320',
         github: 'https://github.com/Abdul-Rehman-44',
-        email: 'abdul_rehman@nexariza.com'
+        email: 'contact@nexariza.com'
       },
       achievements: ['AI Visionary Award', 'AI Researcher of the Year', 'TEDx Speaker'],
       location: 'Lahore, Pakistan',
@@ -77,7 +77,7 @@ const Teams: React.FC = () => {
       social: {
         linkedin: 'https://www.linkedin.com/in/muhammad-anas10/',
         github: 'https://github.com/anasdev-10',
-        email: 'muhammad_anas@nexariza.com'
+        email: 'contact@nexariza.com'
       },
       achievements: ['Tech Innovation Award', 'Patent Holder (8)', 'Open Source Contributor'],
       location: 'Lahore, Pakistan',
@@ -94,7 +94,7 @@ const Teams: React.FC = () => {
       social: {
         linkedin: 'https://www.linkedin.com/in/eman-sarfraz-146a8728a/',
         github: 'https://github.com/Eman-Sarfraz',
-        email: 'eman_sarfaraz@nexariza.com'
+        email: 'contact@nexariza.com'
       },
       achievements: ['AI Ethics Leader', 'Enterprise Consultant', 'Industry Speaker'],
       location: 'Lahore, Pakistan',
@@ -241,6 +241,10 @@ const Teams: React.FC = () => {
                         </motion.a>
                         <motion.a 
                           href={`mailto:${member.social.email}`}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = `mailto:${member.social.email}?subject=Hello from Nexariza AI&body=Hi ${member.name},%0D%0A%0D%0AI would like to get in touch with you.%0D%0A%0D%0AThank you!`;
+                          }}
                           className="p-3 bg-red-600/90 backdrop-blur-sm text-white rounded-full hover:bg-red-500 transform hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-red-500/50"
                           whileHover={{ rotate: 5 }}
                           whileTap={{ scale: 0.95 }}
@@ -303,7 +307,11 @@ const Teams: React.FC = () => {
 
                   {/* Contact Button */}
                   <motion.a
-                    href={`mailto:${member.social.email}?subject=Hello from Nexariza AI Website&body=Hi ${member.name},%0D%0A%0D%0AI visited the Nexariza AI website and would like to connect.%0D%0A%0D%0AThank you!`}
+                    href={`mailto:${member.social.email}?subject=Hello from Nexariza AI Website&body=Hi ${member.name},%0D%0A%0D%0AI visited the Nexariza AI website and would like to connect with you.%0D%0A%0D%0AThank you!`}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      window.location.href = `mailto:${member.social.email}?subject=Hello from Nexariza AI Website&body=Hi ${member.name},%0D%0A%0D%0AI visited the Nexariza AI website and would like to connect with you.%0D%0A%0D%0AThank you!`;
+                    }}
                     className="mt-4 w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -404,6 +412,10 @@ const Teams: React.FC = () => {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => window.location.href = 'mailto:careers@nexariza.com?subject=Interest in Joining Nexariza AI Team&body=Hello Nexariza AI Team,%0D%0A%0D%0AI am interested in joining your team and would like to learn more about opportunities.%0D%0A%0D%0AThank you!'}
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.location.href = 'mailto:careers@nexariza.com?subject=Interest in Joining Nexariza AI Team&body=Hello Nexariza AI Team,%0D%0A%0D%0AI am interested in joining your team and would like to learn more about opportunities.%0D%0A%0D%0AThank you!';
+                }}
               >
                 Send Your Resume
               </motion.button>
