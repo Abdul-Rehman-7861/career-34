@@ -308,10 +308,6 @@ const Teams: React.FC = () => {
                   {/* Contact Button */}
                   <motion.a
                     href={`mailto:${member.social.email}?subject=Hello from Nexariza AI Website&body=Hi ${member.name},%0D%0A%0D%0AI visited the Nexariza AI website and would like to connect with you.%0D%0A%0D%0AThank you!`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href = `mailto:${member.social.email}?subject=Hello from Nexariza AI Website&body=Hi ${member.name},%0D%0A%0D%0AI visited the Nexariza AI website and would like to connect with you.%0D%0A%0D%0AThank you!`;
-                    }}
                     className="mt-4 w-full flex items-center justify-center space-x-2 px-4 py-3 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold rounded-xl hover:from-blue-500 hover:to-blue-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.98 }}
@@ -403,7 +399,7 @@ const Teams: React.FC = () => {
                 className="px-8 py-4 bg-white text-blue-900 font-semibold rounded-full hover:bg-gray-100 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-white/25"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => window.location.href = '/jobs'}
+                onClick={() => window.location.href = 'mailto:careers@nexariza.com?subject=Interest in Joining Nexariza AI Team&body=Hello Nexariza AI Team,%0D%0A%0D%0AI am interested in joining your team and would like to learn more about opportunities.%0D%0A%0D%0AThank you!'}
               >
                 View Open Positions
               </motion.button>
@@ -412,10 +408,6 @@ const Teams: React.FC = () => {
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => window.location.href = 'mailto:careers@nexariza.com?subject=Interest in Joining Nexariza AI Team&body=Hello Nexariza AI Team,%0D%0A%0D%0AI am interested in joining your team and would like to learn more about opportunities.%0D%0A%0D%0AThank you!'}
-                onClick={(e) => {
-                  e.preventDefault();
-                  window.location.href = 'mailto:careers@nexariza.com?subject=Interest in Joining Nexariza AI Team&body=Hello Nexariza AI Team,%0D%0A%0D%0AI am interested in joining your team and would like to learn more about opportunities.%0D%0A%0D%0AThank you!';
-                }}
               >
                 Send Your Resume
               </motion.button>
